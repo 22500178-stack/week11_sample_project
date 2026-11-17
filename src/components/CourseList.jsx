@@ -20,14 +20,14 @@ export default function CourseList() {
     const trimmedName = newName.trim(); //사용자가 입력한 문자열newName의 앞뒤 불필요한 공백을 잘라내 trimmedName이라는 변수에 넣기
 
     if (!trimmedName) { //!trimmedName "앞뒤 공백을 자르고 났더니 남은 글자가 아무것도 없다면"
-      setError("과목명을 입력해 주세요.");
+      alert("과목명을 입력해 주세요.");
       return;
     }
     //새 과목 객체 만들기
     const newCourse = {
       id: Date.now(),
       name: trimmedName,
-      category: newCategory,
+      category: "major",
       completed: false,
     };
 
